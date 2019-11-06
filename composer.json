@@ -1,0 +1,21 @@
+{
+  "name": "Autodownload/attachment-downloader",
+  "description": "Console Application to download attachments from an email account",
+  "minimum-stability": "stable",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "ABC",
+      "email": "ABC@test.local"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "Autodownload\\": "src/"
+    }
+  },
+  "require": {
+    "symfony/console": "2.8.0",
+    "php-imap/php-imap": "2.0.3"
+  }
+}

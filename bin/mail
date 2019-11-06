@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+define('APPLICATION_ROOT', dirname(realpath(__DIR__)));
+
+$application = new \Autodownload\Mail\Application();
+
+$application->add(new \Autodownload\Mail\Command\DownloadAttachment());
+
+$application->run();

@@ -1,4 +1,4 @@
-# Attachment-downloader
+# Attachment-Downloader
 
 A simple Symphone PHP command line project to load and store all founded eMail attachments from a special Goolge Gmail Account Folder.
 All Attachment that found will be stored into a a local volume folder, orderd with new created YEAR, MONTH, DAY subfolders.

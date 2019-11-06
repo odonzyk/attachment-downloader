@@ -22,11 +22,40 @@ apt install composer
 composer update
 composer install
 ```
-until installation it's able to start with 
+
+### configure youre own eMail credentials / settings
+
+configure in -> /attachment-downloader/src/Autodownload/Mail/Command/DownloadAttachment.php
+
+Youre eMail and Password!
+```
+$mailbox = new Mailbox('{imap.gmail.com:993/imap/ssl/novalidate-cert}INBOX', 'testxyz@gmail.com',
+            'your_password',
+```
+
+Your Folder Example: ALL or an other INBOX name
+```
+$mailIds = $mailbox->searchMailbox('ALL');
+```
+
+Change to your right eMail for alert / information
+```
+$to = "alertmail@youre_domain.de";
+	    	$subject = "Automatic alert eMail because the automated attachment downloader was failed!";
+		$txt = "Automatic alert eMail because the automated attachment downloader was failed: $mail->fromAddress";
+		$headers = "From: root@localsystem.local" . "\r\n"; // . "CC: in-CC-@your_domain.de";
+		mail($to,$subject,$txt,$headers);
+```
+
+
+
+### until installation it's able to start with 
 
 ```
 ./mail download -o /mounted_volume
 ```
+
+
 
 ## Built With
 

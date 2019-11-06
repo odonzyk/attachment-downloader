@@ -23,9 +23,9 @@ composer update
 composer install
 ```
 
-### configure youre own eMail credentials / settings
+### Configure youre own eMail credentials / settings
 
-configure in -> /attachment-downloader/src/Autodownload/Mail/Command/DownloadAttachment.php
+Configure in -> /attachment-downloader/src/Autodownload/Mail/Command/DownloadAttachment.php
 
 Youre eMail and Password!
 ```
@@ -49,13 +49,13 @@ $to = "alertmail@youre_domain.de";
 
 
 
-### until installation it's able to start with 
+### Until installation it's able to start with 
 
 ```
 ./mail download -o /mounted_volume
 ```
 
-### example output on the command-shell / bash 
+### Example output on the command-shell / bash 
 ```
 /opt/attachment-downloader/bin/mail download -o /mnt/export-archiv
 
